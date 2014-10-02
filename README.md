@@ -1,7 +1,6 @@
 ### Python client to [Neovim](https://github.com/neovim/neovim)
 
 [![Build Status](https://travis-ci.org/neovim/python-client.svg?branch=master)](https://travis-ci.org/neovim/python-client)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/neovim/python-client/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/neovim/python-client/?branch=master)
 
 Library for scripting Nvim processes through it's msgpack-rpc API.
 
