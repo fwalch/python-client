@@ -35,11 +35,15 @@ def test_strwidth():
 def test_list_runtime_paths():
     # Is this the default runtime path list?
     homedir = os.environ['HOME'] + '/.nvim'
+    if 'VIM' in os.environ:
+        vimdir = os.environ['VIM']
+    else:
+        vimdir = '/usr/local/share/nvim'
     dflt_rtp = [
         homedir,
-        '/usr/local/share/nvim/vimfiles',
-        '/usr/local/share/nvim',
-        '/usr/local/share/nvim/vimfiles/after'
+        vimdir + '/vimfiles',
+        vimdir,
+        vimdir + '/vimfiles/after'
     ]
     # If the runtime is installed the default path
     # is nvim/runtime

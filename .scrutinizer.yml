@@ -131,4 +131,4 @@ filter:
 tools:
   external_code_coverage:
     timeout: 600
-    runs: 6
+    runs: 7
