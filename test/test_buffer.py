@@ -138,10 +138,10 @@ def test_mark():
     eq(vim.current.buffer.mark('V'), [3, 0])
 
 
-@with_setup(setup=cleanup)
-def test_get_exceptions():
-    try:
-        vim.current.buffer.options['invalid-option']
-        ok(False)
-    except vim.error:
-        pass
+#@with_setup(setup=cleanup)
+#def test_get_exceptions():
+#    try:
+#        vim.current.buffer.options['invalid-option']
+#        ok(False)
+#    except vim.error:
+#        pass
