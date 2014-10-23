@@ -1,6 +1,6 @@
 import os
 from nose.tools import with_setup, eq_ as eq, ok_ as ok
-from common import vim, cleanup
+from common import vim, cleanup, restart
 
 
 @with_setup(setup=cleanup)
@@ -138,7 +138,7 @@ def test_mark():
     eq(vim.current.buffer.mark('V'), [3, 0])
 
 
-@with_setup(setup=cleanup)
+@with_setup(setup=cleanup, teardown=restart)
 def test_get_exceptions():
     try:
         vim.current.buffer.options['invalid-option']
